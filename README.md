@@ -112,3 +112,12 @@ Go to http://localhost:8090
 ```
 
 * Note: book and author ids are dynamic. You will need to look for a valid id via the Hollow Explorer.
+
+# Useful links
+
+# Useful links
+
+[https://hollow.how/](https://hollow.how/)
+[https://github.com/Netflix/hollow-reference-implementation](https://github.com/Netflix/hollow-reference-implementation)
+[https://github.com/Netflix/hollow](https://github.com/Netflix/hollow)
+[https://hollow.how/advanced-topics/#in-memory-data-layout](https://hollow.how/advanced-topics/#in-memory-data-layout)
