@@ -1,5 +1,9 @@
 # gr8confus-2018-hollow-demos
-GR8Conf US 2018 - Hollow demos
+Demos for my presentation **High performant in-memory datasets with Netflix H0110W** at GR8ConfUS 2018 (http://gr8conf.us/talks/601).
+
+Netflix Hollow is a java library and toolset for disseminating in-memory datasets from a single producer to many consumers for high performance read-only access. 
+
+For slides please refer to https://github.com/rpalcolea/gr8confus-2018-presentations/blob/master/hollow-presentation.pdf
 
 # Demo
 
