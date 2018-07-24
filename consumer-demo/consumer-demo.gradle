@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+dependencies {
+    implementation project(":data-model")
+    implementation commonDependencies.hollow
+    implementation 'io.github.benas:random-beans:3.7.0'
+    implementation 'com.netflix.hollow:hollow-explorer-ui:3.0.1'
+    implementation 'com.netflix.hollow:hollow-diff-ui:3.0.1'
+    implementation 'org.eclipse.jetty:jetty-server:9.4.11.v20180605'
+    testImplementation commonDependencies.groovy
+    testImplementation commonDependencies.spock
+}
+
+
+task execute(type:JavaExec) {
+    main = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "io.perezalcolea.hollow.enhanced.ConsumerDemo"
+    classpath = sourceSets.main.runtimeClasspath
+}

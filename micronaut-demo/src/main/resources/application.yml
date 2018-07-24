@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: hollow-demo
+  server:
+    port: 5051

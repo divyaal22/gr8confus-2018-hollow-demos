@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'groovy'
+}
+
+dependencies {
+    implementation project(":data-model")
+    implementation commonDependencies.hollow
+    implementation 'io.github.benas:random-beans:3.7.0'
+    testImplementation commonDependencies.groovy
+    testImplementation commonDependencies.spock
+}
+
+mainClassName = "io.perezalcolea.hollow.enhanced.ProducerDemo"

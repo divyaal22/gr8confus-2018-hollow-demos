@@ -1,0 +1,17 @@
+ext {
+    commonVersions = [
+            groovy: "2.4.12",
+            hollow: "3.0.0",
+            objenesis: "1.2",
+            spock: "1.0-groovy-2.4"
+    ]
+
+    commonDependencies = [
+            groovy: "org.codehaus.groovy:groovy-all:${commonVersions.groovy}",
+            hollow: "com.netflix.hollow:hollow:${commonVersions.hollow}",
+            objenesis: "org.objenesis:objenesis:${commonVersions.objenesis}",
+            spock: dependencies.create("org.spockframework:spock-core:${commonVersions.spock}", {
+                exclude group: "org.codehaus.groovy", module: "groovy-all"
+            })
+    ]
+}

@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.5.RELEASE"
+    }
+}
+
+version "0.1"
+group "example.micronaut"
+
+apply plugin:"io.spring.dependency-management"
+apply plugin:"application"
+apply plugin:"groovy"
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://jcenter.bintray.com" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'io.micronaut:bom:1.0.0.M3'
+    }
+}
+
+dependencies {
+    implementation project(":data-model")
+    implementation commonDependencies.hollow
+    implementation "io.micronaut:http-server-netty"
+    implementation "io.micronaut:runtime-groovy"
+    implementation "io.micronaut:inject-groovy"
+    runtime "ch.qos.logback:logback-classic:1.2.3"
+    testImplementation "io.micronaut:inject-groovy"
+    testImplementation("org.spockframework:spock-core:1.1-groovy-2.4") {
+        exclude group: "org.codehaus.groovy", module: "groovy-all"
+    }
+}
+
+run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
+
+mainClassName = "io.perezalcolea.hollow.Application"

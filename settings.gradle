@@ -1,0 +1,12 @@
+include 'consumer-demo', 'data-model', 'micronaut-demo', 'producer-demo', 'ratpack-demo'
+
+rootProject.name = 'gr8confus-2018-hollow-demos'
+
+def setBuildFile(project) {
+    project.buildFileName = "${project.name}.gradle"
+    project.children.each {
+        setBuildFile(it)
+    }
+}
+
+setBuildFile(rootProject)
