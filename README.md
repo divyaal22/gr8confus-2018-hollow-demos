@@ -115,8 +115,6 @@ Go to http://localhost:8090
 
 # Useful links
 
-# Useful links
-
 [https://hollow.how/](https://hollow.how/)
 
 [https://github.com/Netflix/hollow-reference-implementation](https://github.com/Netflix/hollow-reference-implementation)
