@@ -118,6 +118,9 @@ Go to http://localhost:8090
 # Useful links
 
 [https://hollow.how/](https://hollow.how/)
+
 [https://github.com/Netflix/hollow-reference-implementation](https://github.com/Netflix/hollow-reference-implementation)
+
 [https://github.com/Netflix/hollow](https://github.com/Netflix/hollow)
+
 [https://hollow.how/advanced-topics/#in-memory-data-layout](https://hollow.how/advanced-topics/#in-memory-data-layout)
